@@ -1,8 +1,7 @@
 function C = MaskCrossover(A,B)
 
 %We create the Mask
-%Mask = randi([0,1],1,size(A,2));
-Mask = [1 0 1 0 1 0 1];
+Mask = randi([0,1],1,size(A,2));
 
 C = zeros(2,size(A,2));
 
