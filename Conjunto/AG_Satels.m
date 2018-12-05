@@ -8,12 +8,13 @@ function [S,itera] = AG_Satels(NSatels,NManagers)
     Pob = GeneraPoblacion_Satels(NSatels,NManagers,NPoblacion);
     FitPob = EvaluaPoblacion_Satels(Pob);
     itera = 1;
+    Pmut = 0.1;
     
     while itera <= MAX_itera
         Padres = Seleccion_Satels(FitPob,5); % Devuelve los indices de los padres que se cruzaran usando k = 5
         parejas = Emparejar_Satels(Padres,NPoblacion);
         newPob = Cruzar_Satels(parejas,Pob); % Devuelve nueva poblacion cruzada
-        newPobMutada = Mutar_Satels(newPob); % Poblacion con mutaciones
+        newPobMutada = Mutar_Satels(newPob,Pmut); % Poblacion con mutaciones
         FitMutada = EvaluaPoblacion_Satels(newPobMutada);
         [Pob,FitPob] = Reemplazo_Satels(newPobMutada,FitMutada);
         itera = itera + 1;
