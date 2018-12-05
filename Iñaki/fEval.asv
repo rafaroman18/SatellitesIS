@@ -1,0 +1,10 @@
+function euclideaGlobal = fEval(rep, indRep, indTot)
+
+    for i=1: indTot
+        
+        if isEm
+
+
+    end
+
+end
