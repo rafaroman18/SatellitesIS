@@ -1,8 +1,12 @@
-function euclideaGlobal = fEval(rep, indRep, indTot)
+function euclideaGlobal = fEval(vecRep, matPos)
 
-    for i=1: indTot
+    for i=~vecRep
         
-        if isEm
+        for 
+           
+            
+            
+        end
 
 
     end
