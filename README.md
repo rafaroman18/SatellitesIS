@@ -17,11 +17,10 @@ And to make the evaluation functions faster, we will create at the beginning of 
 
 We will do this by **Taboo algorithm** and **Genetic Algorithms**.
 
-**In Genetic Algorithms we will use:**
+### **In Genetic Algorithms we will use:**
 - Selection by Roulette
 - Simple Crossover by Mask
 - Mutation by Inverse Mutation
 - Replace by Elitism (Modified)
-
 
   
