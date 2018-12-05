@@ -1,6 +1,6 @@
 %%% Seleccion por Ruleta %%%
 
-function [Padres] = Seleccion_Satels(FitPob,k)
+function [Padres] = Selection_Roulette(FitPob,k)
     Padres = zeros(1,k);
     PUnit = 1 / sum(FitPob);
     PrbAcum = cumsum(PUnit * FitPob);    
