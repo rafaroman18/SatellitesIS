@@ -23,4 +23,26 @@ We will do this by **Taboo algorithm** and **Genetic Algorithms**.
 - Mutation by Inverse Mutation
 - Replace by Elitism (Modified)
 
-  
+### **Elements of GA:**
+
+- **matPos**: matrix of positions
+
+- **NPob**:number of individuals of each generation
+
+- **MAX_itera**:number of max iterations
+
+- **NSatels**:number of satellites (in this case: 500)
+
+- **NManagers**:number of representants (in this case: 40)
+
+- **FitPob**:evaluation of each individual on this generation
+
+- **Pob**: current generation
+
+- **itera**: current iteration
+
+- **Pmut**: probability of each individual of mutation
+
+- **Padres**: represents the index of the fathers who will cross
+
+- **parejas**: the fathers who will cross
