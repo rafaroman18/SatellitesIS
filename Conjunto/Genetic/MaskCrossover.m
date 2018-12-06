@@ -40,8 +40,5 @@ C = zeros(2,size(A,2));
         rnd = rnd(1:sum(C(2,:))-NManagers); 
         C(2,ind(rnd))=~C(2,ind(rnd));
     end
-    
-    sum(C(1,:))
-    sum(C(2,:))
 
 end
