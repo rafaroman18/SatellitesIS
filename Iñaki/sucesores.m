@@ -1,20 +1,14 @@
 function [lista_sucesores, posChanged] = sucesores(original, matPos)
 
-cont  = 1;
-lista_sucesores = zeros(length(original), length(original)+1 );
+lista_sucesores = repmat(original, length(original), 1);
+diagonal = lista_sucesores(logical(eye(length(original))));
+lista_sucesores(logical(eye(length(original)))) = original(1);
+lista_sucesores(:,1) = diagonal;
+lista_sucesores = double(unique(lista_sucesores,'rows'));
 
-    for i = original
-    
-        sucesor = [original(1:cont-1) ~original(cont) original(cont+1:end)];
-        sucesor
-        -fEval(sucesor, matPos)
-        
-        lista_sucesores(cont, :) = [sucesor -fEval(sucesor, matPos)];
-        cont = cont+1;
-        
-    end
+lista_sucesores(:,end+1) = EvaluaPoblacion_Satels(lista_sucesores, matPos);
 
-    [lista_sucesores , posChanged] = sortrows(lista_sucesores, size(lista_sucesores,2));
-    lista_sucesores = lista_sucesores(:,1:end-1);
+[lista_sucesores , posChanged] = sortrows(lista_sucesores, size(lista_sucesores,2));
+lista_sucesores = logical(lista_sucesores(:,1:end-1));
     
 end

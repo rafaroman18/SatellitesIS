@@ -3,7 +3,8 @@ function euclideaGlobal = fEval(vecRep, matPos)
 %y si vecRep(i) == true, entonces el satelite i es representante.
 %
 %matPos: matriz de posiciones de los satelites 2xN
-
+  
+    vecRep = logical(vecRep);
     euclideaGlobal = 0;
     
     for i=1:length(vecRep)

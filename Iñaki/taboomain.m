@@ -3,7 +3,7 @@ matPos  = rand(2,length(current));
 best = current;
 
 n        = length(current);
-MAX_IT   = 10;
+MAX_IT   = 1000;
 it       = 1;
 TabuList = zeros(1,n); 
 tenure   = 4;
