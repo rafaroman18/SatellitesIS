@@ -1,5 +1,5 @@
 function euclideaGlobal = fEval(vecRep, matPos)
-%vecRep: vector booleano 1xN donde N = nº Satelites, 
+%vecRep: vector booleano 1xN donde N = n? Satelites, 
 %y si vecRep(i) == true, entonces el satelite i es representante.
 %
 %matPos: matriz de posiciones de los satelites 2xN

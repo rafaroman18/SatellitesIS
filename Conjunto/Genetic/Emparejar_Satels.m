@@ -1,7 +1,7 @@
-function [parejas] = Emparejar_Satels(Padres,NPoblacion)
+function [parejas] = Emparejar_Satels(Padres,NPob)
     parejas = zeros(2,length(Padres));
     i = 1;
-    while i <= NPoblacion/2
+    while i <= NPob/2
         p1 = randi(length(Padres));
         p2 = randi(length(Padres));
         r = rep(p1,p2,parejas);

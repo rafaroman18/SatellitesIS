@@ -1,4 +1,4 @@
-function C = MaskCrossover(A,B)
+function C = MaskCrossover(A,B,NManagers)
 
 %We create the Mask
 Mask = randi([0,1],1,size(A,2));
@@ -17,5 +17,31 @@ C = zeros(2,size(A,2));
     C(2,m1) = A(m1);
     C(2,m2) = B(m2);
 
+    if sum(C(1,:))<NManagers
+        ind = find(C(1,:)==0);
+        rnd = randperm(length(ind));
+        rnd = rnd(1:NManagers-sum(C(1,:)));        
+        C(1,ind(rnd))=~C(1,ind(rnd));
+    elseif sum(C(1,:))>NManagers
+        ind = find(C(1,:)==1);
+        rnd = randperm(length(ind));
+        rnd = rnd(1:sum(C(1,:))-NManagers); 
+        C(1,ind(rnd))=~C(1,ind(rnd));
+    end
+    
+    if sum(C(2,:))<NManagers
+        ind = find(C(2,:)==0);
+        rnd = randperm(length(ind));
+        rnd = rnd(1:NManagers-sum(C(2,:)));
+        C(2,ind(rnd))=~C(2,ind(rnd));
+    elseif sum(C(2,:))>NManagers
+        ind = find(C(2,:)==1);
+        rnd = randperm(length(ind));
+        rnd = rnd(1:sum(C(2,:))-NManagers); 
+        C(2,ind(rnd))=~C(2,ind(rnd));
+    end
+    
+    sum(C(1,:))
+    sum(C(2,:))
 
 end
