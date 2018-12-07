@@ -1,0 +1,17 @@
+addpath('./Taboo/Taboo_Satels/');
+addpath('./Genetic/AG_Satels/');
+
+rand('seed',5);
+
+tenure      = 4;
+MAX_IT      = 1000;
+nSatelites  = 500;
+nRep        = 40;
+nPob        = 10;
+
+
+for i = 1:100
+    [bestTaboo(i),fitBestTaboo(i)] = Taboo_Satels(nSatelites, nRep, MAX_IT, tenure);
+    [bestAG(i),fitBestAG]       = AG_Satels(nSatelites, nRep, nPob, MAX_IT);
+    fitBestAG(i) = min(fitBestAG);
+   

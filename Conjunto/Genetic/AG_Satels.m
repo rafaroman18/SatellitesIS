@@ -1,8 +1,5 @@
-function [Pob,FitPob] = AG_Satels
-    NSatels = 500;
-    NManagers = 40;
-    NPob = 10; % Numero de individuos de la poblacion
-    MAX_itera = 1000;
+function [Pob,FitPob] = AG_Satels(NSatels, NManagers, NPob, MAX_itera)
+
     matPos = randi(501,2,NSatels) - 1; 
     distancias = dist(matPos); 
     k = 5;

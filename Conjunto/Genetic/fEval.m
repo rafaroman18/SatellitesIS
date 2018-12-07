@@ -3,6 +3,7 @@ function euclideaGlobal = fEval(vecRep, dist)
 %y si vecRep(i) == true, entonces el satelite i es representante.
 %
 %dist: matriz de distancias entre satelites 2xN
+    vecRep = logical(vecRep);
     euclideaGlobal = 0;
     representados = (find(~vecRep));
     for i=1:representados
