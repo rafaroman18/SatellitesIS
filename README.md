@@ -8,12 +8,12 @@ A station Ri of the subset S is representant of another no selected station when
 
 We pretend to find the representant station combination which minimize the global euclid distance of this problem.
 
-The data structure we will use is a boolean array of 1x500 with 40 1's and 500 0's where each 1 describe el representant by the index of the array. 
+The data structure we will use is a boolean array of 1x500 with 40 1's and 500 0's where each 1 describe the representant by the index of the array. 
 
 Example:
 `array = [1 1 0 1....] This means the station 1, 2 and 4 are representants in this case`
 
-And to make the evaluation functions faster, we will create at the beginning of the program a 500x500 matrix where we will set the euclid distances between each station so we can save time. 
+And to make the evaluation functions faster, we will create at the beginning of the program a 500x500 matrix where we will set the euclid distances between each station so we can save time. Also, to make more efficient this matrix, we will only calculate the distances between each pair of points, so it won't be 500x500 distances, there will be **sum(1:(500-1))** distances in each matrix.
 
 We will do this by **Taboo algorithm** and **Genetic Algorithms**.
 
