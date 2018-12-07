@@ -4,7 +4,7 @@ function [Pob] = GeneraPoblacion_Satels(NSatels,NManagers,NPob)
     while i <= NPob
         r = randperm(NSatels);
         Pob(i,r(1:NManagers)) = 1;
-        Pob = logical(Pob);
         i = i + 1;
     end
+        Pob = logical(Pob);
 end

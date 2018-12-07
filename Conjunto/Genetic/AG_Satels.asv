@@ -17,7 +17,7 @@ function [Pob,FitPob] = AG_Satels
         parejas = Emparejar_Satels(Padres,NPob);
         newPob = Cruzar_Satels(parejas,Pob,NManagers); % Devuelve nueva poblacion cruzada
         newPobMutada = Mutar_Satels(newPob,Pmut); % Poblacion con mutaciones
-        FitMutada = EvaluaPoblacion_Satels(newPobMutada,distancias);
+        FitMutada = EvaluaPoblacion_Satels(newPobMutada,matPos);
         [Pob,FitPob] = ElitistReplace(Pob,newPobMutada,FitPob,FitMutada);
         itera = itera + 1;
     end
