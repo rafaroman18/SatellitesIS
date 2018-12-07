@@ -11,10 +11,9 @@ distancias = dist(matPos);
 n        = length(current);
 it       = 1;
 TabuList = zeros(1,n); 
-stucked = 0;
-fitOldBest = -inf;
+stucked  = false;
 
-while (it <= MAX_IT && stucked < 10)
+while (it <= MAX_IT && ~stucked)
     cont = 1;
     [list_suc, posChanged] = sucesores(current, distancias);
     while ~isempty(list_suc) %&& nuevo estado no es generado
@@ -39,12 +38,8 @@ while (it <= MAX_IT && stucked < 10)
             TabuList(find(TabuList)) = TabuList(find(TabuList)) - 1; 
     end
                it = it + 1;
-               fitBest = fEval(best, distancias);
-               if fitOldBest == fitBest
-                    stucked = stucked + 1;
-               else stucked = 0;
-               end
-               fitOldBest = fitBest;
+
 end
-   
+    
+    fitBest = fEval(best, distancias);
 end
