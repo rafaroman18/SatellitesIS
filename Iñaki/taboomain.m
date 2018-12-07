@@ -1,3 +1,5 @@
+function [best,fitBest] = taboomain
+
 current = logical(randi(2,1,10)-1);
 matPos  = rand(2,length(current));
 best = current;
@@ -35,4 +37,6 @@ while (it <= MAX_IT)
     end
                it = it + 1;
 
+end
+    fitBest = fEval(best, matPos);
 end
