@@ -8,7 +8,7 @@ function euclideaGlobal = fEval(vecRep, dist)
     for i=1:length(vecRep)
         if ~vecRep(i) %Por cada representado
             for x = 1:length(ind)
-            D  = ;
+            D  = ;                          %%FALTA TERMINAR IMPLEMENTARLO%%
             euclideaGlobal = euclideaGlobal + D;
             D = 0;
             end
