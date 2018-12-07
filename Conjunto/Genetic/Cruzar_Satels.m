@@ -1,5 +1,6 @@
 function [newPob] = Cruzar_Satels(parejas,Pob,NManagers)
     newPob = zeros(size(Pob,1),size(Pob,2));
+    newPob = logical(newPob);
     i = 1;
     k = 1;
     while i <= length(parejas)
