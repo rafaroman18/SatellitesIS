@@ -23,3 +23,6 @@ function [b] = rep(p1,p2,parejas)
         end
     end
 end
+
+
+
