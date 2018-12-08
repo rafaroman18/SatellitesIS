@@ -26,30 +26,33 @@ We will do this by **Taboo algorithm** and **Genetic Algorithms**.
 ### **Elements of GA:**
 
 - **matPos**: matrix of positions
-
 - **NPob**:number of individuals of each generation
-
 - **MAX_itera**:number of max iterations
-
 - **NSatels**:number of satellites (in this case: 500)
-
 - **NManagers**:number of representants (in this case: 40)
-
 - **FitPob**:evaluation of each individual on this generation
-
 - **Pob**: current generation
-
 - **itera**: current iteration
-
 - **Pmut**: probability of each individual of mutation
-
 - **Padres**: represents the index of the fathers who will cross
-
 - **parejas**: the fathers who will cross
+- **distancias**: matrix of euclid distance of each satellite to each other
 
 ### **In Taboo Algorithms we will use:**
 - Tenure of 4
 
 ### **Elements of GA:**
-
-
+- **matPos**: matrix of positions
+- **best**: best global individual
+- **distancias**:matrix of euclid distance of each satellite to each other
+- **NPob**:number of individuals of each generation
+- **MAX_itera**:number of max iterations
+- **NSatels**:number of satellites (in this case: 500)
+- **NManagers**:number of representants (in this case: 40)
+- **it**: current iteration
+- **current**:current individual
+- **stucked**: counter of generations where the poblation doesn't improve
+- **list_suc**: successors list
+- **fitOldBest**: fitness of the last Best inidividual
+- **fitBest**: fitness of the current Best
+- **TabuList**: Taboo List
