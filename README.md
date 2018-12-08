@@ -46,3 +46,10 @@ We will do this by **Taboo algorithm** and **Genetic Algorithms**.
 - **Padres**: represents the index of the fathers who will cross
 
 - **parejas**: the fathers who will cross
+
+### **In Taboo Algorithms we will use:**
+- Tenure of 4
+
+### **Elements of GA:**
+
+
