@@ -1,16 +1,17 @@
 function [parejas] = Emparejar_Satels(Padres,NPob)
-    parejas = zeros(2,length(Padres));
+    parejas = zeros(2,NPob/2);
     i = 1;
     while i <= NPob/2
         p1 = randi(length(Padres));
         p2 = randi(length(Padres));
         r = rep(p1,p2,parejas);
         if p1 ~= p2 && r == 0
-            parejas(1,i) = p1;
-            parejas(2,i) = p2;
+            parejas(1,i) = Padres(p1);
+            parejas(2,i) = Padres(p2);
             i = i + 1;
         end
     end
+    parejas(:,NPob/2 + 1:end) = [];
 end
 
 
