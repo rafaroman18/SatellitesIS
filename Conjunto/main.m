@@ -32,7 +32,7 @@ function S = main()
         tic
         [NItsAG,FitAG] = AG_Satels(nSatelites, nRep, nPob, MAX_IT);
         tiemposAG(i) = toc;
-        fitBestAG(i) = -min(FitAG);
+        fitBestAG(i) = -max(FitAG);
         numItrsAG(i) = NItsAG;
     end
     
