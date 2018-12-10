@@ -7,10 +7,10 @@ function [Padres] = Selection_Roulette(FitPob,k)
     i = 1;
     while i <= k
         r = rand;
-        j = find(r>=Prob,1,'last');
-        c = ismember(j-1,Padres);
+        j = find(r>=PrbAcum,1,'last');
+        c = ismember(j,Padres);
         if c == 0
-            Padres(i) = j - 1;
+            Padres(i) = j;
             i = i + 1;
         end
     end
