@@ -33,9 +33,9 @@
         fitBestTab(i) = FitTab;
         numItrsTab(i,:) = NItsTab;
 
-        tabooCell{j,1} = tiemposTab(i);
-        tabooCell{j,2} = fitBestTab(i);
-        tabooCell{j,3} = numItrsTab(i,:);
+        tabooCell{j,1,i} = tiemposTab(i);
+        tabooCell{j,2,i} = fitBestTab(i);
+        tabooCell{j,3,i} = numItrsTab(i,:);
         end
         
         for j=1:10
@@ -43,11 +43,11 @@
         [NItsAG,FitAG] = AG_Satels(nSatelites, nRep, j*10, MAX_IT);
         tiemposAG(i) = toc;
         fitBestAG(i) = -max(FitAG);
-        numItrsAG(i,:,:) = NItsAG;
+        %numItrsAG(i,:,:) = NItsAG;
         
-        AGCell{j,1} = tiemposAG(i);
-        AGCell{j,2} = -max(FitAG);
-        AGCell{j,3} = NItsAG;
+        AGCell{j,1,i} = tiemposAG(i);
+        AGCell{j,2,i} = -max(FitAG);
+        AGCell{j,3,i} = NItsAG;
         end
     end
     
