@@ -11,7 +11,6 @@ function [parejas] = Emparejar_Satels(Padres,NPob)
             i = i + 1;
         end
     end
-    parejas(:,NPob/2 + 1:end) = [];
 end
 
 
