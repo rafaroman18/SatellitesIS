@@ -10,7 +10,7 @@ function [Pob,FitPob] = AG_Satels(NSatels, NManagers, NPob, MAX_itera)
     Pmut = 0.1;
     mejora = 1;
     fitmej = -inf;
-    MAX_mejor = 10;
+    MAX_mejor = 30;
     while itera <= MAX_itera && mejora<=MAX_mejor %(para si no mejora en 10 generaciones)
         Padres = Selection_Roulette(FitPob,k); % Devuelve los indices de los padres que se cruzaran usando k = 5
         parejas = Emparejar_Satels(Padres,NPob);

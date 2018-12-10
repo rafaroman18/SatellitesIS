@@ -7,8 +7,8 @@ function euclideaGlobal = fEval(vecRep, dist)
     euclideaGlobal = 0;
     representados = (find(~vecRep));
     
-    for i=1:representados
-        distancias = dist(i, vecRep);
-        euclideaGlobal = euclideaGlobal + sum(distancias);    
+    for i=1:length(representados)
+        distancias = dist(representados(i), vecRep);
+        euclideaGlobal = euclideaGlobal + min(distancias);    
     end                 
 end
