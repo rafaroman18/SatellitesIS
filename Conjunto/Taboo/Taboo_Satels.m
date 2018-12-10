@@ -1,10 +1,10 @@
-function [best,fitBest] = Taboo_Satels(nSatelites, nRep, MAX_IT, tenure)
+function [best,fitBest] = Taboo_Satels(NSatels, NManagers, MAX_itera, tenure)
 
-current = zeros(1,nSatelites);
-r = randperm(nSatelites);
-current(r(1:nRep)) = 1;
+current = zeros(1,NSatels);
+r = randperm(NSatels);
+current(r(1:NManagers)) = 1;
 
-matPos = randi(501,2,nSatelites) - 1; 
+matPos = randi(501,2,NSatels) - 1; 
 best = current;
 distancias = dist(matPos);
 
@@ -14,7 +14,7 @@ TabuList = zeros(1,n);
 stucked = 0;
 fitOldBest = -inf;
 
-while (it <= MAX_IT && stucked < 10)
+while (it <= MAX_itera && stucked < 10)
     cont = 1;
     [list_suc, posChanged] = sucesores(current, distancias);
     while ~isempty(list_suc) %&& nuevo estado no es generado
