@@ -2,7 +2,7 @@ function [Pob,FitPob] = AG_Satels(NSatels, NManagers, NPob, MAX_itera)
 
     matPos = randi(501,2,NSatels) - 1; 
     distancias = dist(matPos); 
-    k = 5;
+    k = NPob/2;
     % Poblacion inicial
     Pob = GeneraPoblacion_Satels(NSatels,NManagers,NPob);
     FitPob = EvaluaPoblacion_Satels(Pob,distancias);
