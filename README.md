@@ -41,7 +41,7 @@ We will do this by **Taboo algorithm** and **Genetic Algorithms**.
 ### **In Taboo Algorithms we will use:**
 - Tenure of 4
 
-### **Elements of GA:**
+### **Elements of Taboo Algorithms:**
 - **matPos**: matrix of positions
 - **best**: best global individual
 - **distancias**:matrix of euclid distance of each satellite to each other
