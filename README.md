@@ -37,6 +37,7 @@ We will do this by **Taboo algorithm** and **Genetic Algorithms**.
 - **Padres**: represents the index of the fathers who will cross
 - **parejas**: the fathers who will cross
 - **distancias**: matrix of euclid distance of each satellite to each other
+- **mejora**: counter of generations who dont improve
 
 ### **In Taboo Algorithms we will use:**
 - Tenure of 4
