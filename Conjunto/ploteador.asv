@@ -1,0 +1,9 @@
+a = cell2mat(AGCell(:,2,:));
+a = a(:,:);
+
+for i=1:10
+   media(i) = mean(a(i,:));
+    
+end
+
+plot(10:10:100,-media,'Linewidth',3);

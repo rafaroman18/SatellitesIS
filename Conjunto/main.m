@@ -26,7 +26,7 @@
     
     
     for i = 1:iteraciones
-        for j=1:2
+        for j=1:10
         tic
         [NItsTab,FitTab] = Taboo_Satels(nSatelites, nRep, MAX_IT, j*2);
         tiemposTab(i) = toc;
@@ -38,17 +38,17 @@
         tabooCell{j,3,i} = numItrsTab(i,:);
         end
         
-        for j=1:10
-        tic
-        [NItsAG,FitAG] = AG_Satels(nSatelites, nRep, j*10, MAX_IT);
-        tiemposAG(i) = toc;
-        fitBestAG(i) = -max(FitAG);
-        %numItrsAG(i,:,:) = NItsAG;
-        
-        AGCell{j,1,i} = tiemposAG(i);
-        AGCell{j,2,i} = -max(FitAG);
-        AGCell{j,3,i} = NItsAG;
-        end
+%         for j=1:10
+%         tic
+%         [NItsAG,FitAG] = AG_Satels(nSatelites, nRep, j*10, MAX_IT);
+%         tiemposAG(i) = toc;
+%         fitBestAG(i) = -max(FitAG);
+%         %numItrsAG(i,:,:) = NItsAG;
+%         
+%         AGCell{j,1,i} = tiemposAG(i);
+%         AGCell{j,2,i} = -max(FitAG);
+%         AGCell{j,3,i} = NItsAG;
+%         end
     end
     
 %     disp('BÚSQUEDA TABOO');
