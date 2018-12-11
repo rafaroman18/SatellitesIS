@@ -45,7 +45,6 @@ We will do this by **Taboo algorithm** and **Genetic Algorithms**.
 - **matPos**: matrix of positions
 - **best**: best global individual
 - **distancias**:matrix of euclid distance of each satellite to each other
-- **NPob**:number of individuals of each generation
 - **MAX_itera**:number of max iterations
 - **NSatels**:number of satellites (in this case: 500)
 - **NManagers**:number of representants (in this case: 40)
