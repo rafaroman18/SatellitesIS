@@ -26,7 +26,7 @@
     
     
     for i = 1:iteraciones
-        for j=1:10
+        for j=1:40
         tic
         [NItsTab,FitTab] = Taboo_Satels(nSatelites, nRep, MAX_IT, j*2);
         tiemposTab(i) = toc;
