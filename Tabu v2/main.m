@@ -60,7 +60,7 @@ while it < IT_MAX && stucked < 50
         end
             
    end
-   tenures = tenures-1;
+   lista_taboo(:,end) = lista_taboo(:,end)-1;
    newFit = fEval(mejor,distancias);
    if newFit >= oldFit
        stucked = stucked + 1;
