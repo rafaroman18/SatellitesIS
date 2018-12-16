@@ -13,7 +13,7 @@ The data structure we will use is a boolean array of 1x500 with 40 1's and 500 0
 Example:
 `array = [1 1 0 1....] This means the station 1, 2 and 4 are representants in this case`
 
-And to make the evaluation functions faster, we will create at the beginning of the program a 500x500 matrix where we will set the euclid distances between each station so we can save time. Also, to make more efficient this matrix, we will only calculate the distances between each pair of points, so it won't be 500x500 distances, there will be **sum(1:(500-1))** distances in each matrix.
+And to make the evaluation functions faster, we will create at the beginning of the program a 500x500 matrix where we will set the euclid distances between each station so we can save time. 
 
 We will do this by **Taboo algorithm** and **Genetic Algorithms**.
 
@@ -37,15 +37,15 @@ We will do this by **Taboo algorithm** and **Genetic Algorithms**.
 - **Padres**: represents the index of the fathers who will cross
 - **parejas**: the fathers who will cross
 - **distancias**: matrix of euclid distance of each satellite to each other
+- **mejora**: counter of generations who dont improve
 
 ### **In Taboo Algorithms we will use:**
 - Tenure of 4
 
-### **Elements of GA:**
+### **Elements of Taboo Algorithms:**
 - **matPos**: matrix of positions
 - **best**: best global individual
 - **distancias**:matrix of euclid distance of each satellite to each other
-- **NPob**:number of individuals of each generation
 - **MAX_itera**:number of max iterations
 - **NSatels**:number of satellites (in this case: 500)
 - **NManagers**:number of representants (in this case: 40)
