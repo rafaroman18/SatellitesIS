@@ -1,0 +1,46 @@
+nSat = 500;
+nRep = 40;
+
+matPos = rand(2,nSat)*500;
+vecRep = zeros(1,nSat);
+r = randperm(nRep);
+vecRep(r(1:nRep)) = 1;
+vecRep = logical(vecRep);
+distancias = dist(matPos);
+tenure = 4;
+
+%VAR PARADA
+IT_MAX = 1000;
+it = 1;
+strucked = 0;
+%
+
+actual = vecRep;
+mejor  = actual;
+salir = false;
+lista_taboo = [];
+lista_taboo(1,:) = mejor;
+tenures(1) = tenure;
+
+while it < IT_MAX && stucked < 10
+    
+   lista_sucesores = sucesores(mejor);
+   siguiente = 1;
+   while ~salir && siguiente < size(lista_sucesores,1)
+   
+        siguiente = siguiente + 1;
+        nuevo = lista_sucesores(siguiente,:);
+    
+        
+        if fEval(nuevo) < fEval(mejor)
+            
+            actual = nuevo;
+            mejor  = actual;
+            salir  = true;
+            
+            tabooVar = ismember(lista_taboo, nuevo);
+            
+   end
+    
+    
+end
