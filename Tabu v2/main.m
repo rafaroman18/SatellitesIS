@@ -42,7 +42,7 @@ while it < IT_MAX && stucked < 50
             actual = nuevo;
             mejor  = actual;
             salir  = true;
-            if sum(tabooVar) == 0 %NO ESTABA EN LA TABOO
+            if sum(tabooVar) <= 0 %NO ESTABA EN LA TABOO
                 lista_taboo(end+1,1:length(nuevo)) = nuevo;
                 lista_taboo(end,end) = tenure;
             else
